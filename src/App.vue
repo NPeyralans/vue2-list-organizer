@@ -1,18 +1,22 @@
+<!-- App.vue -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+	  <Navbar />
+	  <router-view :key="$route.fullPath"/>
+	</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    HelloWorld
+	Navbar,
+  },
+  mounted(){
+	console.log("The App.vue file has mounted.");
   }
 });
 </script>
