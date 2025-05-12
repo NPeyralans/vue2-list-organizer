@@ -52,5 +52,6 @@ export default Vue.extend({
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
+	justify-content: flex-start;
 }
 </style>
